@@ -6,6 +6,7 @@ d - number of boxes to choose the lowest from them
 """
 @njit
 def experiment_run(n, d):
+    #print(f"Experiment run for d={d}")
     box = np.zeros(n, dtype=np.int32)
     count_balls = 0
     boxes_with_min_one_ball = 0

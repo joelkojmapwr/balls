@@ -60,6 +60,6 @@ class Plot:
         average_values = np.array(average_values) / np.array(function(self.distinct_n_values))
         new_y_values = np.array(y_values) / (function(self.n_values))
         plt.scatter(self.n_values, new_y_values, label=label, s=2)
-        plt.plot(self.distinct_n_values, average_values, color="red", label=f"Average {label}")
-        plt.legend()
+        plt.plot(self.distinct_n_values, average_values, color="red", label=rf'Average {label}')
+        plt.legend(fontsize=16)
         plt.show()
