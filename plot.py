@@ -11,7 +11,7 @@ class Plot:
         self.Dn_values = [experiment.Dn for experiment in self.experiments]
         # En = Dn - Cn
         self.En_values = [experiment.En for experiment in self.experiments]
-        
+        self.max_load = [experiment.max_load for experiment in self.experiments]
         self.k = 50
         
         self.distinct_n_values = np.linspace(1000, 100000, 100)
@@ -52,6 +52,8 @@ class Plot:
         
     def plot_En(self):
         self.plot_results(self.En_values, "En")
+    def plot_max_load(self):
+        self.plot_results(self.max_load, "MaxLoad")
         
     def plot_results_function(self, y_values, label, function=None):
         average_values = self.get_average(self.n_values, y_values)

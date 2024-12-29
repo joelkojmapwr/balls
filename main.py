@@ -2,10 +2,10 @@ from experiment import Experiment
 from experiment import Experiment_Aggregator
 
 def main():
-    experiment_aggregator = Experiment_Aggregator()
+    experiment_aggregator = Experiment_Aggregator(1)
     for n in range (1000, 100001, 1000):
         for k in range(0, 50):
-            experiment = Experiment(n)
+            experiment = Experiment(n, 1)
             experiment.run()
             experiment_aggregator.add_experiment(experiment)
     

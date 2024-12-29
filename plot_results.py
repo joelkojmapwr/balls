@@ -5,16 +5,12 @@ import numpy as np
 
 
 def main():
-    experiment_aggregator = Experiment_Aggregator()
+    experiment_aggregator = Experiment_Aggregator(1)
     experiment_aggregator.load_from_file("results.txt")
     plot = Plot(experiment_aggregator)
     
-    plot.plot_Bn()
-    plot.plot_Un()
-    plot.plot_Cn()
-    plot.plot_Dn()
-    plot.plot_En()
-    
+    plot.plot_max_load()
+    """
     # a)
     plot.plot_results_function(plot.Bn_values, "Bn/n", lambda n: n)
     plot.plot_results_function(plot.Bn_values, "Bn/sqrt(n)", lambda n: np.sqrt(n))
@@ -36,6 +32,7 @@ def main():
     plot.plot_results_function(plot.En_values, "En/n", lambda n: n)
     plot.plot_results_function(plot.En_values, "En/(n*ln(n))", lambda n: n * np.log(n))
     plot.plot_results_function(plot.En_values, "En/(n*ln(ln(n)))", lambda n: n* np.log(np.log(n)))
+    """
     
 if __name__ == "__main__":
     main()
