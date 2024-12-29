@@ -14,7 +14,8 @@ class Plot:
         self.max_load = [experiment.max_load for experiment in self.experiments]
         self.k = 50
         
-        self.distinct_n_values = np.linspace(1000, 100000, 100)
+        self.distinct_n_values = np.linspace(10000, 500000, 99)
+        print(self.distinct_n_values)
         
     def get_average(self, n_values, y_values):
         average_values = []
